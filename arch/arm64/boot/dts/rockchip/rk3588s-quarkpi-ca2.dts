@@ -988,6 +988,22 @@
 	status = "okay";
 };
 
+/*
+ * USB3.0 Type-A host port (the blue connector).
+ * Its SuperSpeed lanes are wired to usb_host2_xhci through combphy2_psu.
+ * Both are enabled in the vendor BSP, but were missing here, so the port
+ * could only ever link at 480 Mbps (USB2).
+ * combphy2_psu is free on this board: the M.2 socket uses pcie2x1l2
+ * (combphy0_ps).
+ */
+&combphy2_psu {
+	status = "okay";
+};
+
+&usb_host2_xhci {
+	status = "okay";
+};
+
 &usb_host0_xhci {
 	dr_mode = "host";
 	status = "okay";
