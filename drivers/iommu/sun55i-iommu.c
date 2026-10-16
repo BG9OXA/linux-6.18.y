@@ -769,7 +769,8 @@ static void sun55i_iommu_domain_free(struct iommu_domain *domain)
 }
 
 static int sun55i_iommu_attach_dev(struct iommu_domain *domain,
-				  struct device *dev)
+				  struct device *dev,
+				  struct iommu_domain *old)
 {
 	return 0;
 }
