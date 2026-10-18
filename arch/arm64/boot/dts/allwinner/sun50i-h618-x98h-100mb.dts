@@ -206,6 +206,7 @@
 				regulator-always-on;
 				regulator-min-microvolt = <810000>;
 				regulator-max-microvolt = <1100000>;
+				regulator-settling-time-up-us = <1000>;
 				regulator-name = "vdd-cpu";
 			};
 
